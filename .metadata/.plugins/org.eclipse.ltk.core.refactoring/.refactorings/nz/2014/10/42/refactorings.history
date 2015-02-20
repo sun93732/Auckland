@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;ExtensionMapper.java&apos; to &apos;eric&apos;" description="Move &apos;ExtensionMapper.java&apos; to &apos;eric&apos;" destination="src/com/eric" element1="src/src/com/eric/ExtensionMapper.java" element2="src/src/com/eric/GetAge.java" element3="src/src/com/eric/GetAgeResponse.java" element4="src/src/com/eric/NewHelloWorld.java" element5="src/src/com/eric/NewHelloWorldCallbackHandler.java" element6="src/src/com/eric/NewHelloWorldStub.java" element7="src/src/com/eric/SayHello.java" element8="src/src/com/eric/SayHelloResponse.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="8" stamp="1413365069436" updateReferences="true"/>
+</session>

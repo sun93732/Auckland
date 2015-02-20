@@ -1,0 +1,23 @@
+
+public class TestException {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int [][]a5 = new int[5]{1,2,3,4,5};
+		int a1[5] = new int[]{1,2,3,4,5};
+
+	}
+	
+	
+	public class MyException extends Exception{}
+	
+	public void test() throws MyException{}
+	
+	public void testMy() throws Exception
+	{
+		test();
+	}
+
+}

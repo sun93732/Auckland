@@ -1,0 +1,19 @@
+
+public class TestException {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int [][] a3 = new int[5][];
+		
+	
+
+		System.out.println(-3 %2 );
+		System.out.println(9 %2 );
+		}
+
+	}
+	
+	
+

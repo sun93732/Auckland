@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://eric.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://eric.com">
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://eric.com">
+            <xs:element name="getAge">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="i" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAgeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sayHello">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="sayHelloResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getAgeRequest">
+        <wsdl:part name="parameters" element="xsd:getAge"/>
+    </wsdl:message>
+    <wsdl:message name="getAgeResponse">
+        <wsdl:part name="parameters" element="xsd:getAgeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="sayHelloRequest">
+        <wsdl:part name="parameters" element="xsd:sayHello"/>
+    </wsdl:message>
+    <wsdl:message name="sayHelloResponse">
+        <wsdl:part name="parameters" element="xsd:sayHelloResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="NewHelloWorldPortType">
+        <wsdl:operation name="getAge">
+            <wsdl:input message="xsd:getAgeRequest" wsaw:Action="urn:getAge"/>
+            <wsdl:output message="xsd:getAgeResponse" wsaw:Action="urn:getAgeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <wsdl:input message="xsd:sayHelloRequest" wsaw:Action="urn:sayHello"/>
+            <wsdl:output message="xsd:sayHelloResponse" wsaw:Action="urn:sayHelloResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="NewHelloWorldSoap11Binding" type="xsd:NewHelloWorldPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getAge">
+            <soap:operation soapAction="urn:getAge" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <soap:operation soapAction="urn:sayHello" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="NewHelloWorldSoap12Binding" type="xsd:NewHelloWorldPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getAge">
+            <soap12:operation soapAction="urn:getAge" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <soap12:operation soapAction="urn:sayHello" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="NewHelloWorldHttpBinding" type="xsd:NewHelloWorldPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="getAge">
+            <http:operation location="getAge"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="sayHello">
+            <http:operation location="sayHello"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="NewHelloWorld">
+        <wsdl:port name="NewHelloWorldHttpSoap11Endpoint" binding="xsd:NewHelloWorldSoap11Binding">
+            <soap:address location="http://localhost:8080/axis2/services/NewHelloWorld"/>
+        </wsdl:port>
+        <wsdl:port name="NewHelloWorldHttpSoap12Endpoint" binding="xsd:NewHelloWorldSoap12Binding">
+            <soap12:address location="http://localhost:8080/axis2/services/NewHelloWorld"/>
+        </wsdl:port>
+        <wsdl:port name="NewHelloWorldHttpEndpoint" binding="xsd:NewHelloWorldHttpBinding">
+            <http:address location="http://localhost:8080/axis2/services/NewHelloWorld"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

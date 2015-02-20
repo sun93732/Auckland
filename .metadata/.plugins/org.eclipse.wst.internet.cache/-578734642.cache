@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://www.oracle.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://www.oracle.com">
+
+<xs:element name="addProductCategories" type="tns:addProductCategories"/>
+
+<xs:element name="addProductCategoriesResponse" type="tns:addProductCategoriesResponse"/>
+
+<xs:element name="fetch_categories" type="tns:fetch_categories"/>
+
+<xs:element name="fetch_categoriesResponse" type="tns:fetch_categoriesResponse"/>
+
+<xs:element name="getProductCategories" nillable="true" type="tns:fetch_categories"/>
+
+<xs:element name="getProductCategoriesResponse" nillable="true" type="tns:fetch_categoriesResponse"/>
+
+<xs:element name="getProductCategoriesV2" type="tns:getProductCategoriesV2"/>
+
+<xs:element name="getProductCategoriesV2Response" type="tns:getProductCategoriesV2Response"/>
+
+<xs:complexType name="getProductCategoriesV2">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getProductCategoriesV2Response">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="product">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double"/>
+<xs:element name="sku" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addProductCategories">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addProductCategoriesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetch_categories">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fetch_categoriesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

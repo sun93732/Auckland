@@ -1,0 +1,15 @@
+package org.string;
+
+public class TestString {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Object o1 = "hello";
+    Object o2 = "hello";
+    System.out.println(o1 == o2);
+	}
+
+}

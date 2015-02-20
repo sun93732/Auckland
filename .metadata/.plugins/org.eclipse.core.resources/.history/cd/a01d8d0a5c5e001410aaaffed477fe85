@@ -1,0 +1,35 @@
+import java.util.Calendar;
+
+
+public class XXXX {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Integer before  =  new Integer(25);
+		Integer after = ++before ==26? 5: new Integer(10);
+		System.out.println(after.intValue() - before.intValue());
+		
+		int c = 1;
+		System.out.println("abc" == "abc");
+		
+		System.out.println(new String("abc") == "abc");
+		
+		int j = 0;
+		int a[] = {2,4};
+		do for(int i:a)
+		{
+			System.out.println(i + "");
+			
+		}
+		while(j++ < 1);
+		
+		
+		System.out.println(String.format("local time %tT", Calendar.getInstance()));
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;a&apos; in &apos;CareerCup.TestArray1.chg(...)&apos; to &apos;array&apos;&#x0D;&#x0A;- Original project: &apos;Ahro&apos;&#x0D;&#x0A;- Original element: &apos;CareerCup.TestArray1.chg(int[]).a&apos;&#x0D;&#x0A;- Renamed element: &apos;a&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;a&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;CareerCup{TestArray1.java[TestArray1~chg~\[I@a!311!317!317!317!\[I!0!true" name="array" references="true" stamp="1388366784473" version="1.0"/>
+</session>

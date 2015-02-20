@@ -1,0 +1,24 @@
+import java.io.File;
+
+
+public class TestException  implements java.io.Serializable{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int [][] a3 = new int[5][];
+		
+	
+
+	
+        double d =  -27.2345;
+        System.out.println(Math.ceil(d));
+        System.out.println(Math.round(d));
+        System.out.println(Math.abs(d));
+        System.out.println(Math.floor(d));
+        
+	}
+	
+}
+

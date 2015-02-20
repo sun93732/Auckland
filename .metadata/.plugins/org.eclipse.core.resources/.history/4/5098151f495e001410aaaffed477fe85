@@ -1,0 +1,22 @@
+
+public class TestException {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+
+	}
+	
+	
+	public class MyException extends Exception{}
+	
+	public void test() throws MyException{}
+	
+	public void testMy() throws Exception
+	{
+		test();
+	}
+
+}

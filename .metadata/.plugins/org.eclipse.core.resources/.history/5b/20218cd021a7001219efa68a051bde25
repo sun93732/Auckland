@@ -1,0 +1,59 @@
+package org.string;
+
+public class TestString {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] array= {49,38,65,97,76,13,27};
+       
+	}
+	public void quickSort(int[] array, int begin, int end )
+	{
+		if(begin == end)
+			return;
+		int r = partition(array,begin, end);
+		if(r >0)
+		{
+			quickSort(array, begin, r-1);
+			quickSort(array, r+1, end);
+		}
+	}
+	public int partition(int[] array, int begin, int end )
+	{
+		if(begin == end){
+			
+			System.out.println(array[begin]);
+			return begin;
+		}
+			
+		int pivot = array[begin];
+		for(int j = begin +1; j<= end;j++)
+		{
+			if(array[j] <= pivot){							
+				begin = begin +1;
+				chg(array, begin, j);
+			}
+			if(array[j] >=pivot)
+			{
+				chg(array, begin +1, j);
+				begin =begin +1;
+			}
+		}
+		System.out.print("the curret array is ");
+		for(int loop =0; loop < array.length; loop ++){
+			System.out.print(array[loop]);
+		}
+		System.out.print("\r\n ");
+		return begin;
+	}
+	public void chg(int[] array, int i, int j)
+	{
+		int tmp = array[i];
+		array[i] = array[j];
+		array[j] = tmp;
+	}
+
+}

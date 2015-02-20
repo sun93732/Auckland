@@ -1,0 +1,36 @@
+
+class SingletonObject
+{
+/*The SingletonObject Object*/
+private static SingletonObject singletonRef;
+
+/*The Constructor*/
+private SingletonObject()
+{
+/*No code required. may remain blank*/
+}
+
+/*Method to get only one object of the SingletonObject*/
+public static synchronized SingletonObject getSingletonObject()
+{
+if(singletonRef == null)
+{
+singletonRef = new SingletonObject();
+}
+return singletonRef;
+}
+
+/*method to prevent cloning the SingletonObject*/
+public Object clone() throws CloneNotSupportedException
+{
+throw new CloneNotSupportedException();
+}
+}
+public class DemofileForExample extends SingletonObject {
+
+
+
+public static void main(String[] args) {
+
+
+} 
