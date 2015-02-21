@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Product {
 	private double price;
 	private String name, sku;
-	//@XmlElement(name = "tag")
+	
 	private Label label;
 	
 	public Product() {
@@ -25,10 +25,11 @@ public class Product {
 		this.label.setId(name.length());
 		this.label.setTag(name.concat("_sufix"));
 	}
-	
+	@XmlElement(name="ProductName")
 	public String getName() {
 		return name;
 	}
+	@XmlElement(name="ProductLabel")
 	public Label getLabel() {
 		return label;
 	}

@@ -7,13 +7,13 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 
 import org.oracle.model.Product;
-@WebService(name="TestMartCatalog")
+@WebService(name="TestMartCatalog") 
 public interface ProductCatalogInterface {
 
-	//@WebMethod(exclude = true) @WebMethod
-	//public abstract List<String> getProductCategories();
+	@WebMethod(exclude = true)
+	public abstract List<String> getProductCategoriesV1();
 
-	@WebMethod(action = "fetch_categories", operationName = "fetch_categories")
+	@WebMethod(action = "fetch_categories_action", operationName = "fetch_categories")
 	//not necessary 
 	public abstract List<String> getProductCategories(String category);
 
