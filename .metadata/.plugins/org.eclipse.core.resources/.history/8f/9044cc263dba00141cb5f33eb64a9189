@@ -1,0 +1,16 @@
+package com.eric.spring;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+
+public class DrawingApp {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		BeanFactory factory =  new XmlBeanFactory();
+
+	}
+
+}

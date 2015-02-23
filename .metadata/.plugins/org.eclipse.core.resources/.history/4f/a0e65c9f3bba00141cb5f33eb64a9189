@@ -1,0 +1,10 @@
+package com.eric.spring;
+
+public class Triangle {
+
+	private String type;
+	
+	public void draw() {
+		
+	}
+}
