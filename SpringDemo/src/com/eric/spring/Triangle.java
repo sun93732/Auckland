@@ -7,7 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle{
+public class Triangle implements InitializingBean, DisposableBean{
     private Point pointA;
     private Point pointB;
     private Point pointC;
@@ -46,13 +46,25 @@ public class Triangle{
 
 	public void myInit() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("initializing is done");
+		System.out.println("My initializing is done");
 	}
 
 	
 	public void myDestroy() throws Exception {
 		// TODO Auto-generated method stub
+		System.out.println(" My deconstructing is done");
+		
+	}
+
+	@Override
+	public void destroy() throws Exception {
 		System.out.println("deconstructing is done");
+		
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("initializing is done");
 		
 	}
 
