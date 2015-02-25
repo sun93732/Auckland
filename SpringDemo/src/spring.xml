@@ -4,22 +4,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="triangle" class="com.eric.spring.Triangle">
-		<property name="pointA" ref="zeroPoint"></property>
-		<property name="pointB">
-			<bean class="com.eric.spring.Point">
-				<property name="x" value="-20"></property>
-				<property name="y" value="0"></property>
-			</bean>
-		</property>
-		<property name="pointC" ref="point3"></property>
+	<bean id="triangle" class="com.eric.spring.Triangle" autowire="byName" scope="singleton">
+	
 	</bean>
-	<bean id="zeroPoint" class="com.eric.spring.Point">
+	<bean id="pointA" class="com.eric.spring.Point" scope="">
 		<property name="x" value="0"></property>
 		<property name="y" value="0"></property>
 	</bean>
-
-	<bean id="point3" class="com.eric.spring.Point">
+   <bean id="pointB" class="com.eric.spring.Point">
+        <property name="x" value="-20"></property>
+        <property name="y" value="0"></property>
+    </bean>
+	<bean id="pointC" class="com.eric.spring.Point">
 		<property name="x" value="20"></property>
 		<property name="y" value="0"></property>
 	</bean>
