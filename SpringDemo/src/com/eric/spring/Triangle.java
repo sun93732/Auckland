@@ -2,15 +2,16 @@ package com.eric.spring;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements ApplicationContextAware, BeanNameAware{
+public class Triangle{
     private Point pointA;
     private Point pointB;
     private Point pointC;
-    private String beanName;
-    private ApplicationContext ctx = null;
+   
 	
 	public Point getPointA() {
 		return pointA;
@@ -42,6 +43,20 @@ public class Triangle implements ApplicationContextAware, BeanNameAware{
 		System.out.println("PointC:" + this.getPointC());
 	}
 
+
+	public void myInit() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("initializing is done");
+	}
+
+	
+	public void myDestroy() throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("deconstructing is done");
+		
+	}
+
+	/*
 	@Override
 	public void setApplicationContext(ApplicationContext ctx)
 			throws BeansException {
@@ -56,5 +71,6 @@ public class Triangle implements ApplicationContextAware, BeanNameAware{
 		this.beanName = arg0;
 		System.out.println("Bean name is " +  beanName);
 		
-	}	
+	}
+	*/	
 }
