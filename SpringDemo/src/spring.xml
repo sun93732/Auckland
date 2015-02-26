@@ -5,13 +5,13 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd"
                            default-init-method="myInit">
    
-	<bean id="triangle" class="com.eric.spring.Triangle" init-method="myInit" destroy-method="myDestroy">
+	<bean id="triangle" class="com.eric.spring.Triangle">
 	    <property name="PointA" ref="pointA"></property>
 	   <property name="PointB" ref="pointC"></property>
 	   <property name="PointC" ref="pointB"></property>
 	
 	</bean>
-	
+	 
 	<bean id="pointA" class="com.eric.spring.Point" scope="">
 		<property name="x" value="0"></property>
 		<property name="y" value="0"></property>
@@ -25,6 +25,6 @@
 		<property name="y" value="0"></property>
 	</bean>
 	<alias name="triangle" alias="triangle-alias"/>
-
+    <bean class="com.eric.spring.DisplayNameBeanPostProcessor"></bean>
 </beans>
          
