@@ -7,7 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements InitializingBean, DisposableBean{
+public class Triangle implements Shape{
     private Point pointA;
     private Point pointB;
     private Point pointC;
@@ -38,6 +38,7 @@ public class Triangle implements InitializingBean, DisposableBean{
 	}
 
 	public void draw() {
+		System.out.println("Drawing an triangle....");
 		System.out.println("PointA: " + this.getPointA());
 		System.out.println("PointB:" + this.getPointB());
 		System.out.println("PointC:" + this.getPointC());
@@ -55,7 +56,7 @@ public class Triangle implements InitializingBean, DisposableBean{
 		System.out.println(" My deconstructing is done");
 		
 	}
-
+    /*
 	@Override
 	public void destroy() throws Exception {
 		System.out.println("deconstructing is done");
@@ -68,7 +69,7 @@ public class Triangle implements InitializingBean, DisposableBean{
 		
 	}
 
-	/*
+
 	@Override
 	public void setApplicationContext(ApplicationContext ctx)
 			throws BeansException {
