@@ -12,7 +12,7 @@
 
 	</bean>
 	<bean id="circle" class="com.eric.spring.Circle">
-		<property name="center" ref="pointA"></property>
+		<!-- property name="center" ref="pointA"></property-->
 	</bean>
 
 	<bean id="pointA" class="com.eric.spring.Point" scope="">
@@ -36,5 +36,6 @@
 		<property name="locations" value="points.properties" />
 
 	</bean>
+	<bean class= "org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
 </beans>
          
