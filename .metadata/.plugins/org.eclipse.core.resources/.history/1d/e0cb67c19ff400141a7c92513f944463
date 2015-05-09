@@ -1,0 +1,59 @@
+package com.eric.jerseyrest;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
+import com.eric.jerseyrest.db.DataSource;
+import com.eric.jerseyrest.model.Message;
+import com.eric.jerseyrest.service.MessageService;
+
+@Path("/messages")
+//s@PerSession
+public class MessageResource {
+	MessageService service = new MessageService();
+	
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+	public String getMesssage() {
+		
+		return "hello world message!";
+	}
+    
+    @GET
+    @Path("/list")
+    @Produces(MediaType.APPLICATION_XML)
+	public List<Message> getMesssageList() {
+		
+		return service.getMessages();
+	}
+    
+    @GET
+    @Path("/query")
+    @Produces(MediaType.APPLICATION_XML)
+	public Message queryMessage(@QueryParam("id") int id) {
+
+        Message msg =  DataSource.getInstance().getMap().get(id);
+        return msg;		
+	}
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+	public String queryMessage(Message message) {
+    	Message msg =  DataSource.getInstance().getMap().put(message.getId(), message);
+        return msg;	
+	}
+    @GET
+    @Path("{messageId}")
+    @Produces(MediaType.APPLICATION_XML)
+	public Message queryMessagebyId(@PathParam("messageId") int id) {
+
+        Message msg =  DataSource.getInstance().getMap().get(id);
+        return msg;		
+	}
+}

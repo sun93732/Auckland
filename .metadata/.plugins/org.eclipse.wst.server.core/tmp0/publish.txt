@@ -1,4 +1,0 @@
-#GlassFish 3
-#Sat Feb 21 12:13:42 CST 2015
-org.eclipse.jst.jee.server\:Restful=D\:\\glassfish3\\glassfish\\domains\\domain1\\eclipseApps\\Restful
-org.eclipse.jst.jee.server\:TestMart=D\:\\glassfish3\\glassfish\\domains\\domain1\\eclipseApps\\TestMart

@@ -1,3 +1,4 @@
 activeuserprofiles=SHUAISUN-CN;Team
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=shuaisun
+useridperkey=SHUAISUN-CN.Local\=shuaisun;

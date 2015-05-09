@@ -1,0 +1,8 @@
+package com.oracle.io;
+
+public class TestReadWriteFile {
+   public static void main(String[] args) throws Exception{
+	   File file  = new File("c:\\1.txt");
+	   
+   }
+}

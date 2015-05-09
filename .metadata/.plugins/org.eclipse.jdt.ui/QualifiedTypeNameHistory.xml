@@ -27,7 +27,6 @@
 <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Formatter"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.jws.WebMethod"/>
 <fullyQualifiedTypeName name="javax.jws.WebService"/>
 <fullyQualifiedTypeName name="javax.xml.messaging.Endpoint"/>
@@ -48,4 +47,10 @@
 <fullyQualifiedTypeName name="javax.management.remote.JMXServiceURL"/>
 <fullyQualifiedTypeName name="javax.management.remote.JMXConnectorServer"/>
 <fullyQualifiedTypeName name="javax.management.remote.JMXConnectorServerFactory"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="javax.ws.rs.MatrixParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.HeaderParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.CookieParam"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,9 @@
+package com.eric.jerseyrest;
+
+import javax.ws.rs.core.MediaType;
+
+@Path("/annotation")
+@Consumes(MediaType.APPLICATION_XML)
+public class AnnotationResource {
+
+}

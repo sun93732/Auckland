@@ -1,0 +1,5 @@
+package com.eric.jerseyrest;
+@Path("/annotation")
+public class AnnotationResource {
+
+}

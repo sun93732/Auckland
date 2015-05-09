@@ -1,0 +1,8 @@
+package com.oracle.io;
+
+public class MathTest {
+	public static main(String[] argv) {
+		
+	}
+
+}
